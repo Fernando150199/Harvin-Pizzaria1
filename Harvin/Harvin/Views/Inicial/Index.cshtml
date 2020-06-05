@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Bem Vindo";
+}
+
+<div id="preload" class="preload"></div>
+<div class="row inicial">
+    <div class="col s12">
+        <i class="material-icons">alarm_on</i>
+        <div id="relogio"></div>
+    </div>
+    <div class="col s12 m4 tile">
+        <i class="material-icons green-text">shopping_cart</i>
+        <h6>Situação do Estoque</h6>
+        <hr />
+        <p class="porcentagem">
+            <i class="material-icons">check</i>
+            87% - Bom
+        </p>
+        <p class="notificacao">
+            <i class="material-icons orange-text" ">priority_high</i>
+            Coca Cola - Estoque <span class="orange-text">ocioso (37%)</span>
+        </p>
+        <a href="@Url.Action("Index", "Produtos")" class="btn">Monitore</a>
+    </div>
+    <div class="col s12 m4 tile">
+        <i class="material-icons red-text">warning</i>
+        <h6>Notificações</h6>
+        <hr />
+        <p class="notificacoes">
+            <i class="material-icons orange-text">local_pizza</i>
+            Novo Pedido - Delivery - <span>17:44</span>
+        </p>
+        <p class="notificacoes">
+            <i class="material-icons orange-text">local_pizza</i>
+            Novo Pedido - Mesa 7 - <span>18:01</span>
+        </p>
+        <a href="@Url.Action("Index", "Produtos")" class="btn">Verifique!</a>
+    </div>
+    <div class="col s12 m4 tile">
+        <i class="material-icons blue-text">restaurant</i>
+        <h6>Reservas hoje</h6>
+        <hr />
+        <p class="reservas">
+            <i class="material-icons blue-text">people</i>
+            4 pessoas - 20:30
+        </p>
+        <p class="reservas">
+            <i class="material-icons blue-text">people</i>
+            12 pessoas - 19:55
+        </p>
+        <a href="@Url.Action("Index", "Produtos")" class="btn">Todos</a>
+
+    </div>
+
+</div>
+
+
+<!--RELÓGIO-->
+<script type="text/javascript">
+      function relogio(){
+        var data = new Date();
+        var horas = data.getHours();
+        var minutos = data.getMinutes();
+        var segundos = data.getSeconds();
+
+        if(horas < 10){
+          horas = "0" + horas;
+        }
+        if(minutos < 10){
+          minutos = "0"+ minutos;
+        }
+        if(segundos < 10){
+          segundos = "0" + segundos;
+        }
+        document.getElementById("relogio").innerHTML=horas+":"+minutos+":"+segundos;
+      }
+      window.setInterval("relogio()", 1000);
+</script>

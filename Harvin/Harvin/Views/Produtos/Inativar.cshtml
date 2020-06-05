@@ -1,0 +1,114 @@
+﻿@model Harvin.Models.Produto
+
+@{
+    ViewBag.Title = "Inativar Produto";
+}
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Nome)</h4>
+    <h6 class="red-text"><i class="material-icons">delete</i> <br />Você realmente deseja inativar este produto?</h6>
+    <p>Esta ação pode ser desfeita mais tarde. </p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorUnitario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeMinimaEstoque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeMinimaEstoque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeMaximaEstoque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeMaximaEstoque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeAtualEstoque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeAtualEstoque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estocavel)
+        </dt>
+
+        <dd>
+            @if (Model.Estocavel) {
+                <p>Sim</p>
+            } else {
+                <p>Não</p>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comentario)
+        </dd>
+
+    </dl>
+</div>
+
+<hr />
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.HiddenFor(model => model.Id)
+    </div>
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Inativar" class="btn red darken-4" /> |
+        <a href="@Url.Action("Lista")" class="red btn">Cancelar</a>
+    </div>
+}
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+        <i class="material-icons">more_vert</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating green tooltipped" data-position="left" data-delay="0" data-tooltip="Novo Cargo" href="@Url.Action("Create")"><i class="material-icons">add</i></a></li>
+        <li><a class="btn-floating blue tooltipped" data-position="left" data-delay="0" data-tooltip="Funcionarios Cadastrados" href="@Url.Action("Index", "Funcionarios")"><i class="material-icons">assignment_ind</i></a></li>
+    </ul>
+</div>

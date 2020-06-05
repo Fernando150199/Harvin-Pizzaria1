@@ -1,0 +1,546 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: 'Lato'!important;
+  font-weight: 100!important;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+.acessonegado {
+  margin: 100px 0px!important;
+  text-align: center!important;
+}
+
+
+.container {
+  width: 95%!important;
+  text-align: center!important;
+}
+
+.form-control {
+  display: block;
+}
+
+#estocavel{
+  display: block;
+  position: relative;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.container .row {
+  text-align: center!important;
+}
+
+.card .card-content .card-title {
+  font-size: 15px!important;
+}
+
+h1, h2, h3, h4, h5, h6, p, table{
+  text-align: center;
+  font-family: Lato;
+  text-transform: uppercase!important;
+  font-weight: 100;
+}
+
+nav{
+  font-family: 'Lato';
+  font-weight: 100;
+}
+
+nav ul{
+  text-transform: uppercase;
+}
+
+/*MENU MOBILE*/
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f1592d;
+  transition: all .5s ease;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav.mobile-menu {
+  text-align: center;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: none;
+  background: none;
+}
+
+.mobile-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-menu li {
+  align-items: center;
+  flex: 1;
+  line-height: 15vh;
+  float: none;
+}
+
+.mobile-menu a {
+  color: #FFFFFF;
+  font-size: 1.5em;
+  transition: all 0.5s ease;
+  display: block;
+  text-decoration: none;
+}
+
+.margin-clear {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.outer-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+
+
+/*BODY CONTENT*/
+.body_content{
+  padding-top: 20px;
+}
+
+.adiciona_produto {
+  margin-top: -25px!important;
+}
+
+.card .card-image img{
+  height: 200px!important;
+}
+
+.collapsible-header img{
+  width: 50px!important;
+  height: 50px!important;
+  border: none;
+}
+
+.collapsible-header.active {
+  background-color: rgba(241,89,45, 0.2);
+}
+
+.collapsible-header{
+    background-color: #202325!important;
+}
+
+.collapsible{
+    border: none!important;
+}
+
+.badge{
+    color: white!important;
+}
+
+.dropdown-content {
+  top: 64px!important;
+  background-color: rgba(0,0,0,0.8)!important;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  padding: 14px 5px !important;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.input-field>select {
+  display: block!important;
+  position: absolute!important;
+  width: 100%!important;
+  text-align: center!important;
+  pointer-events: all!important;
+  height: 50px!important;
+  opacity: 1!important;
+  margin-top: -20px!important;
+}
+
+.select-wrapper input.select-dropdown {
+  display: none!important;
+}
+
+.quantidade{
+  display: block!important;
+}
+
+.adicionar {
+  margin-top: 30px!important;
+}
+
+.cabecalho {
+  width: 100%;
+  height: 200px;
+  background-color: #f1592d;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://lot66.ca/wp-content/uploads/2014/06/pizza.jpg');
+  background-size: cover;
+  margin-top: -96px;
+}
+
+.cabecalho > h5{
+  padding-top: 125px;
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 50px;
+  font-family: 'Lato';
+  font-weight: 100;
+  letter-spacing: 5px;
+  font-size: 18px;
+}
+
+.cabecalho hr{
+  color: white;
+  border: none;
+  width: 200px;
+  background-color: white;
+  height: 1px;
+  float: left;
+  margin-left: 50px;
+}
+
+img.activator.categoria{
+  height: 150px!important;
+}
+
+.bodytop_message{
+  margin: 50px;
+  font-size: 18px;
+}
+
+.button-collapse-funcionario {
+  float: right!important;
+  display: block!important;
+}
+
+.side-nav > li > div > .background > img{
+  width: 100%;
+  height: 100%;
+}
+
+nav ul a {
+  letter-spacing: 1px;
+  font-size: 12px!important;
+}
+
+table{
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.body_content > hr{
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  width: 200px!important;
+  margin-top: -10px!important;
+  margin-bottom: 50px!important;
+}
+
+td, th{
+  border-radius: 0px!important;
+  text-align: center!important;
+  border: 1px solid grey!important;
+  width: 10%!important;
+}
+
+th{
+  background-color: #ff5d00;
+  font-weight: 100;
+}
+
+tr{
+    background-color: #202325!important;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+nav .collapsible-header a:hover{
+  background-color: red!important;
+}
+
+@media(max-width: 600px) {
+  .card .card-image img {
+    height: 150px !important;
+  }
+
+  td, th {
+    border-radius: 0px !important;
+    text-align: center !important;
+    border: 0px solid grey !important;
+  }
+}
+
+.cadastro {
+  width: 95%;
+  margin: auto;
+}
+
+.form_block hr {
+  width: 200px;
+  text-align: left!important;
+  float: left;
+  background-color: gray;
+  height: 1px;
+  margin-top: -5px;
+  border: none;
+}
+
+.form_block{
+  text-align: left;
+  margin-top: 30px;
+}
+
+dd {
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+dt{
+  font-weight: 600;
+}
+
+.acessos {
+  text-align: left!important;
+}
+
+
+@media(max-width: 992px){
+  td, th{
+    border-radius: 0px!important;
+    text-align: center!important;
+    border: 0px solid grey!important;
+  }
+
+  .cabecalho > h5 {
+    text-align: center;
+    margin: 0px 20px;
+  }
+
+  .cabecalho hr {
+    float: none;
+    margin-left: auto;
+  }
+}
+
+
+
+
+
+/*TELA INICIAL*/
+.notification_ballon {
+  background-color: red;
+  padding: 5px!important;
+  font-weight: 800;
+  font-size: 12px;
+}
+.tile{
+  margin-top: 30px;
+}
+
+.tile .btn{
+  background-color: transparent!important;
+  border: 1px solid WHITE;
+  color: black;
+}
+
+.tile > .material-icons{
+  margin-top: 10px;
+}
+
+.title > h5{
+  text-transform: none!important;
+  font-size: 15px;
+}
+
+#relogio{
+  font-size: 20px!important;
+  font-weight: 100;
+  font-family: Lato;
+}
+.porcentagem{
+  color: lightgreen;
+  font-size: 20px;
+  font-family: Lato;
+}
+
+
+
+
+
+
+
+/*ESTILO ESCURO*/
+.nav-wrapper{
+  background-color: #17171C!important;
+}
+
+nav a{
+  color: white!important;
+  font-family: 'Raleway';
+  font-weight: 100!important;
+}
+
+.brand-logo{
+  font-weight: 100!important;
+}
+
+.dropdown-content{
+  background-color: #17171C!important;
+}
+
+.dropdown-content li > a{
+  color: white!important;
+  font-weight: 100;
+}
+
+nav ul a{
+  color: #fff!important;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+nav ul a:hover, nav ul a:focus, .dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected{
+  background-color: #ff5d00!important;
+  color: white!important;
+  transition-property: all;
+  transition-duration: 0.7s;
+}
+
+
+
+/*COR DE FUNDO*/
+.tile .btn{
+  background-color: transparent!important;
+  border: 1px solid WHITE;
+  color: white;
+}
+
+body{
+  background-color: #17171C;
+}
+
+*{
+  color: white;
+}
+
+.inicial{
+    font-family: Lato;
+    font-weight100;
+}
+
+.card-content{
+    background-color: #202325!important
+}
+
+.card-title{
+    color: white!important;
+}
+
+.card-reveal{
+    background-color: #202325!important;
+    font-family: Lato!important;
+    font-weight: 100;
+}
+
+.card-reveal b{
+    font-weight: 100;
+    color: darkorange;
+    text-transform: uppercase;
+}
+
+#slide-out{
+    background-color: #17171C;
+}
+
+#slide-out i{
+    color: white!important;
+}
+
+#slide-out a{
+    color: white!important;
+}
+
+#slide-out .name{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: Lato;
+}
+
+#slide-out .email{
+    font-family: Lato;
+    font-weight: 100;
+}
+
+.side-nav .user-view .circle{
+    height: 100px!important;
+    width: 100px!important;
+}
+
+#slide-out .subheader {
+    color: grey!important;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+#slide-out a{
+    font-weight: 100;
+    font-family: Lato;
+}
+
+#slide-out li a:hover{
+    background-color: #ff5d00;
+    voice-duration: 0.5s;
+    transition-property: all;
+}
+
+.side-nav{
+    background-color: #17171C!important;
+}
+
+.side-nav i{
+    color: white!important;
+}
+
+.side-nav .collapsible-body li a{
+    background-color: #2b2b33!important;
+}
+
+.side-nav .user-view .name{
+    font-family: Lato!important;
+    font-size: 20px!important;
+    font-weight: 800;
+    text-transform: none;
+}
+
+.side-nav .user-view .email{
+    text-transform: none;
+}
+
+select {
+    background-color: #17171C!important;
+}
+
+#estocavel{
+    display: none!important;
+}

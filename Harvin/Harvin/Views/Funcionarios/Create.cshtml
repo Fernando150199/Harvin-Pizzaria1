@@ -1,0 +1,243 @@
+﻿@model Harvin.Models.Funcionario
+
+@{
+    ViewBag.Title = "Cadastrar Funcionário";
+}
+
+<div class="cadastro">
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <div class="row">
+
+            <!--INFORMAÇÕES BÁSICAS-->
+            <div class="col s12 form_block" style="margin-top: 50px;">
+                <p>Informações Básicas</p>
+                <hr />
+            </div>
+
+            <!--Nome-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Nome, new { @class = "valIdate" })
+                <label for="icon_prefix">Nome</label>
+            </div>
+
+            <!--Sobrenome-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Sobrenome, new { @class = "valIdate" })
+                <label for="icon_prefix">Sobrenome</label>
+            </div>
+
+            <!--Cpf-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Cpf, new { @class = "valIdate" })
+                <label for="icon_prefix">Cpf</label>
+            </div>
+
+            <!--Telefone-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Telefone, new { @class = "valIdate" })
+                <label for="icon_prefix">Telefone</label>
+            </div>
+
+            <!--Data de Nascimento-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.DataDeNascimento, new { @class = "valIdate" })
+                <label for="icon_prefix">Data de Nascimento</label>
+            </div>
+
+
+            <!--INFORMAÇÕES DE ENDREÇO-->
+            <div class="col s12 form_block" style="margin-top: 50px;">
+                <p>Informações de Endereço</p>
+                <hr />
+            </div>
+
+            <!--Cep-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Cep, new { @class = "valIdate" })
+                <label for="icon_prefix">Cep</label>
+            </div>
+
+            <!--Endereço-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Endereco, new { @class = "valIdate" })
+                <label for="icon_prefix">Endereço</label>
+            </div>
+
+            <!--Complemento-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Complemento, new { @class = "valIdate" })
+                <label for="icon_prefix">Complemento</label>
+            </div>
+
+            <!--Bairro-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Bairro, new { @class = "valIdate" })
+                <label for="icon_prefix">Bairro</label>
+            </div>
+
+            <!--Cidade-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Cidade, new { @class = "valIdate" })
+                <label for="icon_prefix">Cidade</label>
+            </div>
+
+
+
+            <!--INFORMAÇÕES DE ACESSO-->
+            <div class="col s12 form_block" style="margin-top: 50px;">
+                <p>Informações de Acesso</p>
+                <hr />
+            </div>
+
+            <!--E-Mail-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Email, new { @class = "valIdate" })
+                <label for="icon_prefix">E-Mail</label>
+            </div>
+
+            <!--Senha-->
+            <div class="input-field col s12 m6">
+                @Html.EditorFor(model => model.Senha, new { @class = "valIdate" })
+                <label for="icon_prefix">Senha</label>
+            </div>
+
+
+
+
+
+            <!--INFORMAÇÕES VISUAIS-->
+            <div class="col s12 form_block" style="margin-top: 50px;">
+                <p>Informações Visuais</p>
+                <hr />
+            </div>
+
+            <!--LINK Imagem-->
+            <div class="input-field col s12">
+                @Html.EditorFor(model => model.Imagem, new { @class = "valIdate" })
+                <label for="icon_prefix">URL Imagem</label>
+            </div>
+
+            <!--INFORMAÇÕES SOBRE Cargo-->
+            <div class="col s12 form_block" style="margin-top: 50px;">
+                <p>Cargo do Funcionário</p>
+                <hr />
+            </div>
+
+            <!--Cargo-->
+            <div class="input-field col s12 m6">
+                <div style="margin: 20px; text-align: left!important;">
+                    <a href="@Url.Action("Create", "Cargo")" class="btn-floating tooltipped" data-position="right" data-delay="50" data-tooltip="Novo Cargo" target="_blank"><i class="material-icons">add</i></a>
+                </div>
+                @Html.DropDownList("id", null, htmlAttributes: new { @class = "form-control" })
+                <label for="icon_prefix">Cargo</label>
+            </div>
+
+
+            <!--INFORMAÇÕES DE ACESSO-->
+            <div class="col s12 form_block" style="margin-top: 50px;">
+                <p>Informações de Acesso</p>
+                <hr /> <br />
+                <i class="material-icons">info</i> Selecione quais módulos este funcionário terá acesso
+            </div>
+
+            <!--ACESSOS-->
+            <div class="acessos" style="text-align: left;">
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.Home, new { @class = "valIdate" })
+                    <label for="icon_prefix">Home</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.Bi, new { @class = "valIdate" })
+                    <label for="icon_prefix">BI</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.Relatorios, new { @class = "valIdate" })
+                    <label for="icon_prefix">Relatórios</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ConsultarFuncionarios, new { @class = "valIdate" })
+                    <label for="icon_prefix">Consultar Funcionários</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ManipularFuncionarios, new { @class = "valIdate" })
+                    <label for="icon_prefix">Manipular Funcionários</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ManipularCargos, new { @class = "valIdate" })
+                    <label for="icon_prefix">Manipular Cargos</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ConsultarCargos, new { @class = "valIdate" })
+                    <label for="icon_prefix">Consultar Cargos</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ConsultarCategorias, new { @class = "valIdate" })
+                    <label for="icon_prefix">Consultar Categorias</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ManipularCategorias, new { @class = "valIdate" })
+                    <label for="icon_prefix">Manipular Categorias</label>
+                </div>
+
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ManipularProdutos, new { @class = "valIdate" })
+                    <label for="icon_prefix">Manipular Produtos</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ConsultarPedidos, new { @class = "valIdate" })
+                    <label for="icon_prefix">Consultar Pedidos</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ManipularPedidos, new { @class = "valIdate" })
+                    <label for="icon_prefix">Manipular Pedidos</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ConsultarReservas, new { @class = "valIdate" })
+                    <label for="icon_prefix">Consultar Reserva</label>
+                </div>
+                <div class="input-field col s3 m2">
+                    @Html.EditorFor(model => model.ManipularReservas, new { @class = "valIdate" })
+                    <label for="icon_prefix">Manipular Reserva</label>
+                </div>
+            </div>
+
+
+
+
+
+            <!--FINALIZAR CADASTRO-->
+            <div class="col s12 form_block" style="margin-top: 50px;">
+                <p>Finalizar Cadastro</p>
+                <hr />
+            </div>
+
+            <!--CADASTRAR-->
+            <div class="input-field col s12" style="text-align: left;">
+                <input type="submit" value="Cadastrar" class="btn green" />
+                <a href="@Url.Action("Index")" class="btn red">Cancelar</a>
+            </div>
+
+
+        </div>
+    }
+</div>
+
+<!-- Modal Trigger -->
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red modal-trigger pulse" href="#modal1">
+        <i class="large material-icons">help</i>
+    </a>
+</div>
+
+<!-- Modal Structure -->
+<div Id="modal1" class="modal" style="text-transform: none!important;">
+    <div class="modal-content">
+        <h5>Ajuda - Cadastro de Funcionário</h5>
+        <p>Abaixo uma explicação de cada campo</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+﻿@model IEnumerable<Harvin.Models.Produto>
+
+@{
+    ViewBag.Title = "Lista de Produtos (com Inativos)";
+}
+
+<p style="margin: 30px;">Todos os produtos cadastrados no sistemas aparecem aqui, incluíndo os Inativos (em vermelho)</p>
+<hr />
+<a href="@Url.Action("Lista")" class="btn center deep-orange" style="margin-bottom: 30px;">Apenas Ativos</a>
+<table class="table striped centered responsive-table">
+    <tr style="background-color: lightgrey;">
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantidadeMinimaEstoque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantidadeMaximaEstoque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantidadeAtualEstoque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estocavel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comentario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    if (item.Inativo) {
+        <tr style="background-color: rgba(255,0,0,0.2);">
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeMinimaEstoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeMaximaEstoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeAtualEstoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @if (item.Estocavel) {
+                    <p>Sim</p>
+                } else {
+                    <p>Nao</p>
+                }
+            </td>
+            <td>
+                <img src="@item.Imagem" style="wIdth: 45px!important; height: 45px!important;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentario)
+            </td>
+            <td>
+                @Html.ActionLink("Ediatr", "Edit", new { Id = item.Id }) |
+                @Html.ActionLink("Deletar", "Delete", new { Id = item.Id })
+                @Html.ActionLink("Ativar", "Ativar", new { Id = item.Id })
+            </td>
+        </tr>
+    } else {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeMinimaEstoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeMaximaEstoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeAtualEstoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @if (item.Estocavel) {
+                    <p>Sim</p>
+                } else {
+                    <p>Nao</p>
+                }
+            </td>
+            <td>
+                <img src="@item.Imagem" style="wIdth: 45px!important; height: 45px!important;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentario)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { Id = item.Id }) |
+                @Html.ActionLink("Deletar", "Delete", new { Id = item.Id })
+                @Html.ActionLink("Inativar", "Inativar", new { Id = item.Id })
+            </td>
+        </tr>
+    }
+}
+</table>
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+</div>

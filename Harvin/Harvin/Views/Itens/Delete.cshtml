@@ -1,0 +1,24 @@
+﻿@model Harvin.Models.Item
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Retirar</h2>
+
+<h3>Você tem certeza de que quer retirar este Item?</h3>
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Retirar" class="btn btn-default" /> |
+            @Html.ActionLink("Cancelar", "Index")
+        </div>
+    }
+</div>
