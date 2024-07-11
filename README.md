@@ -1,5 +1,5 @@
 ## Harvin-Pizzaria
-Repositorio Oficial do Projeto. Concluido em 75%, para o Projeto Multidisplinar dos Alunos do Ultimo Semestre de Analise e Desenvolvimento de Sistemas da UNIP
+Repositorio Oficial do Projeto. Concluido para o Projeto Multidisplinar dos Alunos do Ultimo Semestre de Analise e Desenvolvimento de Sistemas da UNIP
 
 ## Descrição
 Este é um sistema de gerenciamento de pizzaria desenvolvido em JavaScript, projetado para facilitar a gestão de pedidos, clientes e estoque de uma pizzaria fictícia.
